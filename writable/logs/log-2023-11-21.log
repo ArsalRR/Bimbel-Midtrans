@@ -1,0 +1,849 @@
+CRITICAL - 2023-11-21 01:53:42 --> Undefined variable $s
+in APPPATH/Views/Users/Daftar.php on line 28.
+ 1 APPPATH/Views/Users/Daftar.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $s', 'APPPATH/Views/Users/Daftar.php', 28)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/Daftar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/Daftar', [], true)
+ 5 APPPATH/Controllers/User.php(35): view('Users/Daftar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User->daftar()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 02:18:37 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(130): CodeIgniter\BaseModel->save(Array)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#14 {main}
+CRITICAL - 2023-11-21 02:18:37 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`) VALUES (\'Jihan\', \'1000000\', \'099988776\', \'kuyarsal@gmail.com\', \'Harnomio\', \'SMKN 02 Pekalongan\', \'943c34af-fdf9-4efe-815a-d68cb342d758\', 1700554717, \'3\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`) VALUES (\'Jihan\', \'1000000\', \'099988776\', \'kuyarsal@gmail.com\', \'Harnomio\', \'SMKN 02 Pekalongan\', \'943c34af-fdf9-4efe-815a-d68cb342d758\', 1700554717, \'3\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`) VALUES (\'Jihan\', \'1000000\', \'099988776\', \'kuyarsal@gmail.com\', \'Harnomio\', \'SMKN 02 Pekalongan\', \'943c34af-fdf9-4efe-815a-d68cb342d758\', 1700554717, \'3\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`) VALUES (:nama_lengkap:, :nominal:, :no_hp:, :email:, :alamat:, :asal_sekolah:, :token:, :id_order:, :id_mentor:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Rangking.php(130): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 02:28:27 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(130): CodeIgniter\BaseModel->save(Array)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#14 {main}
+CRITICAL - 2023-11-21 02:28:27 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`) VALUES (\'Jihan\', \'2000000\', \'0881665522\', \'jihan@gmail.com\', \'Harnomio\', \'SMKN 02 Pekalongan\', \'47886431-b4b8-4105-9df8-d108dc84976c\', 1700555306, \'3\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`) VALUES (\'Jihan\', \'2000000\', \'0881665522\', \'jihan@gmail.com\', \'Harnomio\', \'SMKN 02 Pekalongan\', \'47886431-b4b8-4105-9df8-d108dc84976c\', 1700555306, \'3\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`) VALUES (\'Jihan\', \'2000000\', \'0881665522\', \'jihan@gmail.com\', \'Harnomio\', \'SMKN 02 Pekalongan\', \'47886431-b4b8-4105-9df8-d108dc84976c\', 1700555306, \'3\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`) VALUES (:nama_lengkap:, :nominal:, :no_hp:, :email:, :alamat:, :asal_sekolah:, :token:, :id_order:, :id_mentor:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Rangking.php(130): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 02:45:13 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->delete('5')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 02:45:13 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `daftar`
+WHERE `id` IN (\'5\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `daftar`
+WHERE `id` IN (\'5\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `daftar`
+WHERE `id` IN (\'5\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `daftar`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->delete('5')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 02:48:57 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 02:48:57 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `daftar`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 02:52:58 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 02:52:58 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `daftar`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 03:26:40 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 03:26:40 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `daftar`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 03:52:39 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 03:52:39 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `daftar`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 03:54:52 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 03:54:52 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `daftar`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 03:56:31 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 03:56:31 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `daftar`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 04:05:15 --> mysqli_sql_exception: Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 04:05:15 --> Can't update table 'daftar' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `daftar`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `daftar`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Rangking.php(136): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->delete('1')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 04:22:32 --> mysqli_sql_exception: Duplicate entry '4' for key 'id_mentor' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(135): CodeIgniter\BaseModel->save(Array)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#14 {main}
+CRITICAL - 2023-11-21 04:22:32 --> Duplicate entry '4' for key 'id_mentor'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Juhan\', \'1000000\', \'088828288\', \'zaki@gmail.com\', \'Harnomio 1\', \'SMKN 02 Pekalongan\', \'b573086c-22da-4f2b-8268-05c4d1b03aa3\', 1700562152, \'4\', \'juhan\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Juhan\', \'1000000\', \'088828288\', \'zaki@gmail.com\', \'Harnomio 1\', \'SMKN 02 Pekalongan\', \'b573086c-22da-4f2b-8268-05c4d1b03aa3\', 1700562152, \'4\', \'juhan\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Juhan\', \'1000000\', \'088828288\', \'zaki@gmail.com\', \'Harnomio 1\', \'SMKN 02 Pekalongan\', \'b573086c-22da-4f2b-8268-05c4d1b03aa3\', 1700562152, \'4\', \'juhan\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (:nama_lengkap:, :nominal:, :no_hp:, :email:, :alamat:, :asal_sekolah:, :token:, :id_order:, :id_mentor:, :alias:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Rangking.php(135): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 04:23:52 --> Undefined array key "nama"
+in APPPATH/Views/Admin/index.php on line 57.
+ 1 APPPATH/Views/Admin/index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'APPPATH/Views/Admin/index.php', 57)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(36): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 04:24:44 --> Undefined variable $s
+in APPPATH/Views/Users/Daftar.php on line 28.
+ 1 APPPATH/Views/Users/Daftar.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $s', 'APPPATH/Views/Users/Daftar.php', 28)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/Daftar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/Daftar', [], true)
+ 5 APPPATH/Controllers/User.php(35): view('Users/Daftar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User->daftar()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 04:27:20 --> Undefined array key "nama_lengkap"
+in APPPATH/Views/Mentor/index.php on line 31.
+ 1 APPPATH/Views/Mentor/index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_lengkap"', 'APPPATH/Views/Mentor/index.php', 31)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Mentor/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Mentor/index', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(33): view('Mentor/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 07:00:47 --> Undefined variable $s
+in APPPATH/Views/Users/Daftar.php on line 28.
+ 1 APPPATH/Views/Users/Daftar.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $s', 'APPPATH/Views/Users/Daftar.php', 28)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/Daftar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/Daftar', [], true)
+ 5 APPPATH/Controllers/User.php(35): view('Users/Daftar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User->daftar()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 07:18:45 --> mysqli_sql_exception: Duplicate entry '5' for key 'id_mentor' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(135): CodeIgniter\BaseModel->save(Array)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#14 {main}
+CRITICAL - 2023-11-21 07:18:45 --> Duplicate entry '5' for key 'id_mentor'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Jihan\', \'1000000\', \'08166622\', \'kuyarsal@gmail.com\', \'Harnomio\', \'Sma 3 pekalongan\', \'5636d3c0-fe2b-4f31-9607-784510f8d03f\', 1700572724, \'5\', \'jihan\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Jihan\', \'1000000\', \'08166622\', \'kuyarsal@gmail.com\', \'Harnomio\', \'Sma 3 pekalongan\', \'5636d3c0-fe2b-4f31-9607-784510f8d03f\', 1700572724, \'5\', \'jihan\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Jihan\', \'1000000\', \'08166622\', \'kuyarsal@gmail.com\', \'Harnomio\', \'Sma 3 pekalongan\', \'5636d3c0-fe2b-4f31-9607-784510f8d03f\', 1700572724, \'5\', \'jihan\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (:nama_lengkap:, :nominal:, :no_hp:, :email:, :alamat:, :asal_sekolah:, :token:, :id_order:, :id_mentor:, :alias:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Rangking.php(135): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 16:45:17 --> Undefined array key "id"
+in APPPATH/Views/Mentor/edit.php on line 7.
+ 1 APPPATH/Views/Mentor/edit.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH/Views/Mentor/edit.php', 7)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Mentor/edit.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Mentor/edit', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(121): view('Mentor/edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->formedit('yoga')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 16:46:00 --> mysqli_sql_exception: Unknown column 'mentor.id' in 'where clause' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `mentor`...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mentor`...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mentor`...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mentor`...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(657): CodeIgniter\Model->update('10', Array)
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/TaskControll.php(105): CodeIgniter\BaseModel->save(Array)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\TaskControll->update('10')
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#14 {main}
+CRITICAL - 2023-11-21 16:46:00 --> Unknown column 'mentor.id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `mentor` SET `nama` = \'Rizki\', `pelajaran` = \'DBMS\', `jampel` = \'\'
+WHERE `mentor`.`id` IN (\'10\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mentor` SET `nama` = \'Rizki\', `pelajaran` = \'DBMS\', `jampel` = \'\'
+WHERE `mentor`.`id` IN (\'10\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mentor` SET `nama` = \'Rizki\', `pelajaran` = \'DBMS\', `jampel` = \'\'
+WHERE `mentor`.`id` IN (\'10\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mentor` SET `nama` = :nama:, `pelajaran` = :pelajaran:, `jampel` = :jampel:
+WHERE `mentor`.`id` IN :mentor.id:', [...], false)
+ 5 SYSTEMPATH/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 SYSTEMPATH/BaseModel.php(657): CodeIgniter\Model->update('10', [...])
+ 9 APPPATH/Controllers/TaskControll.php(105): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->update('10')
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 16:46:53 --> mysqli_sql_exception: Unknown column 'mentor.id' in 'where clause' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `mentor`...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mentor`...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mentor`...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mentor`...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(657): CodeIgniter\Model->update('10', Array)
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/TaskControll.php(105): CodeIgniter\BaseModel->save(Array)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\TaskControll->update('10')
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#14 {main}
+CRITICAL - 2023-11-21 16:46:53 --> Unknown column 'mentor.id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('UPDATE `mentor` SET `nama` = \'Rizki\', `pelajaran` = \'DBMS\', `jampel` = \'\'
+WHERE `mentor`.`id` IN (\'10\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `mentor` SET `nama` = \'Rizki\', `pelajaran` = \'DBMS\', `jampel` = \'\'
+WHERE `mentor`.`id` IN (\'10\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `mentor` SET `nama` = \'Rizki\', `pelajaran` = \'DBMS\', `jampel` = \'\'
+WHERE `mentor`.`id` IN (\'10\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `mentor` SET `nama` = :nama:, `pelajaran` = :pelajaran:, `jampel` = :jampel:
+WHERE `mentor`.`id` IN :mentor.id:', [...], false)
+ 5 SYSTEMPATH/Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH/BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH/Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 SYSTEMPATH/BaseModel.php(657): CodeIgniter\Model->update('10', [...])
+ 9 APPPATH/Controllers/TaskControll.php(105): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->update('10')
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 16:47:41 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `me...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `me...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `me...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `me...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/TaskControll.php(99): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\TaskControll->delete('10')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 16:47:41 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `mentor`
+WHERE `id` IN (\'10\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `mentor`
+WHERE `id` IN (\'10\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `mentor`
+WHERE `id` IN (\'10\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `mentor`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/TaskControll.php(99): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->delete('10')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 16:49:43 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `me...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `me...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `me...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `me...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/TaskControll.php(99): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\TaskControll->delete('10')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 16:49:43 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `mentor`
+WHERE `id` IN (\'10\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `mentor`
+WHERE `id` IN (\'10\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `mentor`
+WHERE `id` IN (\'10\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `mentor`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/TaskControll.php(99): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->delete('10')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 16:50:54 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `me...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `me...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `me...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `me...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/TaskControll.php(99): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\TaskControll->delete('11')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-11-21 16:50:54 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `mentor`
+WHERE `id` IN (\'11\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `mentor`
+WHERE `id` IN (\'11\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `mentor`
+WHERE `id` IN (\'11\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `mentor`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/TaskControll.php(99): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->delete('11')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 16:51:03 --> Too few arguments to function App\Controllers\TaskControll::formedit(), 0 passed in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH/Controllers/TaskControll.php on line 114.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->formedit()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 16:52:32 --> Undefined array key "id_m"
+in APPPATH/Views/Mentor/index.php on line 32.
+ 1 APPPATH/Views/Mentor/index.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_m"', 'APPPATH/Views/Mentor/index.php', 32)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Mentor/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Mentor/index', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(33): view('Mentor/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 16:59:50 --> Undefined array key "nama_lengkap"
+in APPPATH/Views/Mentor/index.php on line 30.
+ 1 APPPATH/Views/Mentor/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_lengkap"', 'APPPATH/Views/Mentor/index.php', 30)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Mentor/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Mentor/index', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(36): view('Mentor/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 17:01:01 --> Undefined array key "nama_lengkap"
+in APPPATH/Views/Mentor/index.php on line 30.
+ 1 APPPATH/Views/Mentor/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_lengkap"', 'APPPATH/Views/Mentor/index.php', 30)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Mentor/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Mentor/index', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(36): view('Mentor/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 18:49:17 --> Undefined variable $s
+in APPPATH/Views/Users/Daftar.php on line 28.
+ 1 APPPATH/Views/Users/Daftar.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $s', 'APPPATH/Views/Users/Daftar.php', 28)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/Daftar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/Daftar', [], true)
+ 5 APPPATH/Controllers/User.php(35): view('Users/Daftar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User->daftar()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-21 18:50:19 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-11-21 18:50:19 --> 220 smtp.gmail.com ESMTP z10-20020a056a00240a00b006c31c0dfb69sm8508380pfh.188 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [36.71.83.70]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [36.71.83.70]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z10-20020a056a00240a00b006c31c0dfb69sm8508380pfh.188 - gsmtp
+
+ERROR - 2023-11-21 18:50:29 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-11-21 18:50:29 --> 220 smtp.gmail.com ESMTP s2-20020aa78d42000000b006be5af77f06sm8547510pfe.2 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [36.71.83.70]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [36.71.83.70]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials s2-20020aa78d42000000b006be5af77f06sm8547510pfe.2 - gsmtp
+
+CRITICAL - 2023-11-21 20:09:22 --> Undefined variable $row
+in APPPATH/Views/Users/mentor.php on line 16.
+ 1 APPPATH/Views/Users/mentor.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH/Views/Users/mentor.php', 16)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/mentor.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/mentor', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(42): view('Users/mentor', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->mentor()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:21:20 --> Call to a member function getRandomName() on null
+in APPPATH/Controllers/TaskControll.php on line 91.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:22:12 --> Call to a member function getRandomName() on null
+in APPPATH/Controllers/TaskControll.php on line 91.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:31:33 --> Call to a member function getExtension() on null
+in APPPATH/Controllers/TaskControll.php on line 91.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:34:58 --> Call to a member function getRandomName() on null
+in APPPATH/Controllers/TaskControll.php on line 83.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:36:41 --> Call to a member function move() on null
+in APPPATH/Controllers/TaskControll.php on line 83.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:40:53 --> Call to a member function getExtension() on null
+in APPPATH/Controllers/TaskControll.php on line 84.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:42:20 --> Call to a member function getExtension() on null
+in APPPATH/Controllers/TaskControll.php on line 84.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:43:22 --> Call to a member function getRandomName() on null
+in APPPATH/Controllers/TaskControll.php on line 91.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:51:35 --> Call to a member function move() on null
+in APPPATH/Controllers/TaskControll.php on line 93.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 20:56:04 --> Call to a member function move() on null
+in APPPATH/Controllers/TaskControll.php on line 93.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 21:00:57 --> Call to a member function getRandomName() on null
+in APPPATH/Controllers/TaskControll.php on line 91.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->simpan()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-21 22:25:27 --> Undefined array key "id_order"
+in APPPATH/Views/Admin/index.php on line 28.
+ 1 APPPATH/Views/Admin/index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_order"', 'APPPATH/Views/Admin/index.php', 28)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')

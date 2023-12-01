@@ -1,0 +1,33 @@
+CRITICAL - 2023-10-23 15:27:44 --> CURL Error: Could not resolve host: app.sandbox.midtrans.com
+in VENDORPATH/midtrans/midtrans-php/Midtrans/ApiRequestor.php on line 156.
+ 1 VENDORPATH/midtrans/midtrans-php/Midtrans/ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-II_md8vOI_7aaHmQaiOp0XHZ', [...], 'POST')
+ 2 VENDORPATH/midtrans/midtrans-php/Midtrans/Snap.php(108): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-II_md8vOI_7aaHmQaiOp0XHZ', [...])
+ 3 VENDORPATH/midtrans/midtrans-php/Midtrans/Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH/Controllers/Rangking.php(112): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-10-23 15:28:40 --> CURL Error: Could not resolve host: app.sandbox.midtrans.com
+in VENDORPATH/midtrans/midtrans-php/Midtrans/ApiRequestor.php on line 156.
+ 1 VENDORPATH/midtrans/midtrans-php/Midtrans/ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-II_md8vOI_7aaHmQaiOp0XHZ', [...], 'POST')
+ 2 VENDORPATH/midtrans/midtrans-php/Midtrans/Snap.php(108): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-II_md8vOI_7aaHmQaiOp0XHZ', [...])
+ 3 VENDORPATH/midtrans/midtrans-php/Midtrans/Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH/Controllers/Rangking.php(112): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-10-23 15:31:28 --> CURL Error: Could not resolve host: app.sandbox.midtrans.com
+in VENDORPATH/midtrans/midtrans-php/Midtrans/ApiRequestor.php on line 156.
+ 1 VENDORPATH/midtrans/midtrans-php/Midtrans/ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-II_md8vOI_7aaHmQaiOp0XHZ', [...], 'POST')
+ 2 VENDORPATH/midtrans/midtrans-php/Midtrans/Snap.php(108): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-II_md8vOI_7aaHmQaiOp0XHZ', [...])
+ 3 VENDORPATH/midtrans/midtrans-php/Midtrans/Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH/Controllers/Rangking.php(112): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')

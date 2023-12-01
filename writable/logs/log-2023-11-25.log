@@ -1,0 +1,33 @@
+ERROR - 2023-11-25 20:00:51 --> mysqli_sql_exception: Duplicate entry '3' for key 'id_mentor' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(142): CodeIgniter\BaseModel->save(Array)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#14 {main}
+CRITICAL - 2023-11-25 20:00:51 --> Duplicate entry '3' for key 'id_mentor'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Zaki\', \'2000000\', \'081544332266788\', \'kuyarsal@gmail.com\', \'Harnomio\', \'SMKN 02 Pekalongan\', \'943159e0-e67a-43b9-ae70-3b16957338c7\', 1700964049, \'3\', \'zaki\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Zaki\', \'2000000\', \'081544332266788\', \'kuyarsal@gmail.com\', \'Harnomio\', \'SMKN 02 Pekalongan\', \'943159e0-e67a-43b9-ae70-3b16957338c7\', 1700964049, \'3\', \'zaki\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Zaki\', \'2000000\', \'081544332266788\', \'kuyarsal@gmail.com\', \'Harnomio\', \'SMKN 02 Pekalongan\', \'943159e0-e67a-43b9-ae70-3b16957338c7\', 1700964049, \'3\', \'zaki\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (:nama_lengkap:, :nominal:, :no_hp:, :email:, :alamat:, :asal_sekolah:, :token:, :id_order:, :id_mentor:, :alias:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Rangking.php(142): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')

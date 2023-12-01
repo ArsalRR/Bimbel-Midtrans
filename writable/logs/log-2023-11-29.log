@@ -1,0 +1,101 @@
+ERROR - 2023-11-29 04:43:41 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:170
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(170): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'bimbel_rangking', 3306, '', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/User.php(34): CodeIgniter\BaseModel->findAll()
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\User->daftar()
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/User.php(34): CodeIgniter\BaseModel->findAll()
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\User->daftar()
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#11 {main}
+CRITICAL - 2023-11-29 04:43:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `daftar`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/User.php(34): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User->daftar()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-29 18:46:49 --> Undefined variable $s
+in APPPATH/Views/Users/Daftar.php on line 30.
+ 1 APPPATH/Views/Users/Daftar.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $s', 'APPPATH/Views/Users/Daftar.php', 30)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/Daftar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/Daftar', [], true)
+ 5 APPPATH/Controllers/User.php(36): view('Users/Daftar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User->daftar()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-11-29 18:47:57 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bimbel_rangking`.`daftar`, CONSTRAINT `daftar_ibfk_1` FOREIGN KEY (`id_mentor`) REFERENCES `mentor` (`id`)) in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(142): CodeIgniter\BaseModel->save(Array)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#14 {main}
+CRITICAL - 2023-11-29 18:47:57 --> Cannot add or update a child row: a foreign key constraint fails (`bimbel_rangking`.`daftar`, CONSTRAINT `daftar_ibfk_1` FOREIGN KEY (`id_mentor`) REFERENCES `mentor` (`id`))
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Zaki\', \'1000000\', \'08166655252552\', \'arasalkuy@gmail.com\', \'Limas\', \'SMKN 02 Pekalongan\', \'a14db82e-de32-4d3e-8497-ce8bde711a19\', 1701305276, \'\', \'zaki\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Zaki\', \'1000000\', \'08166655252552\', \'arasalkuy@gmail.com\', \'Limas\', \'SMKN 02 Pekalongan\', \'a14db82e-de32-4d3e-8497-ce8bde711a19\', 1701305276, \'\', \'zaki\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (\'Zaki\', \'1000000\', \'08166655252552\', \'arasalkuy@gmail.com\', \'Limas\', \'SMKN 02 Pekalongan\', \'a14db82e-de32-4d3e-8497-ce8bde711a19\', 1701305276, \'\', \'zaki\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`) VALUES (:nama_lengkap:, :nominal:, :no_hp:, :email:, :alamat:, :asal_sekolah:, :token:, :id_order:, :id_mentor:, :alias:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Rangking.php(142): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-29 19:29:59 --> Undefined variable $s
+in APPPATH/Views/Users/Daftar.php on line 30.
+ 1 APPPATH/Views/Users/Daftar.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $s', 'APPPATH/Views/Users/Daftar.php', 30)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/Daftar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/Daftar', [], true)
+ 5 APPPATH/Controllers/User.php(36): view('Users/Daftar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User->daftar()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')

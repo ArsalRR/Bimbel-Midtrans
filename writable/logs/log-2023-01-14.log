@@ -1,0 +1,36 @@
+CRITICAL - 2023-01-14 22:43:23 --> Undefined constant "CodeIgniter\Debug\VENDORPATH"
+in SYSTEMPATH\Debug\Exceptions.php on line 177.
+ 1 SYSTEMPATH\Debug\Exceptions.php(157): CodeIgniter\Debug\Exceptions->isFakerDeprecationError(8192, 'Creation of dynamic property App\\Controllers\\Kategori::$kategori is deprecated', 'APPPATH\\Controllers\\Kategori.php', 14)
+ 2 APPPATH\Controllers\Kategori.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Kategori::$kategori is deprecated', 'APPPATH\\Controllers\\Kategori.php', 14)
+ 3 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Kategori->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 22:43:34 --> Undefined constant "CodeIgniter\Debug\VENDORPATH"
+in SYSTEMPATH\Debug\Exceptions.php on line 177.
+ 1 SYSTEMPATH\Debug\Exceptions.php(157): CodeIgniter\Debug\Exceptions->isFakerDeprecationError(8192, 'Creation of dynamic property App\\Controllers\\Satuan::$satuan is deprecated', 'APPPATH\\Controllers\\Satuan.php', 13)
+ 2 APPPATH\Controllers\Satuan.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Satuan::$satuan is deprecated', 'APPPATH\\Controllers\\Satuan.php', 13)
+ 3 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Satuan->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 22:44:16 --> Undefined constant "CodeIgniter\Debug\VENDORPATH"
+in SYSTEMPATH\Debug\Exceptions.php on line 177.
+ 1 SYSTEMPATH\Debug\Exceptions.php(157): CodeIgniter\Debug\Exceptions->isFakerDeprecationError(8192, 'Creation of dynamic property App\\Controllers\\Satuan::$satuan is deprecated', 'APPPATH\\Controllers\\Satuan.php', 13)
+ 2 APPPATH\Controllers\Satuan.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Satuan::$satuan is deprecated', 'APPPATH\\Controllers\\Satuan.php', 13)
+ 3 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Satuan->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 22:44:31 --> Undefined constant "CodeIgniter\Debug\VENDORPATH"
+in SYSTEMPATH\Debug\Exceptions.php on line 177.
+ 1 SYSTEMPATH\Debug\Exceptions.php(157): CodeIgniter\Debug\Exceptions->isFakerDeprecationError(8192, 'Creation of dynamic property App\\Controllers\\Satuan::$satuan is deprecated', 'APPPATH\\Controllers\\Satuan.php', 13)
+ 2 APPPATH\Controllers\Satuan.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Satuan::$satuan is deprecated', 'APPPATH\\Controllers\\Satuan.php', 13)
+ 3 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Satuan->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

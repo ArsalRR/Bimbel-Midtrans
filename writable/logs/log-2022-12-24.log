@@ -1,0 +1,24 @@
+CRITICAL - 2022-12-24 01:41:37 --> Undefined property: App\Controllers\Satuan::$kategori
+in APPPATH\Controllers\Satuan.php on line 111.
+ 1 APPPATH\Controllers\Satuan.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Satuan::$kategori', 'APPPATH\\Controllers\\Satuan.php', 111)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Satuan->updatedata()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Satuan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 01:42:32 --> Undefined property: App\Controllers\Satuan::$kategori
+in APPPATH\Controllers\Satuan.php on line 111.
+ 1 APPPATH\Controllers\Satuan.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Satuan::$kategori', 'APPPATH\\Controllers\\Satuan.php', 111)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Satuan->updatedata()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Satuan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 01:43:47 --> Undefined property: App\Controllers\Satuan::$kategori
+in APPPATH\Controllers\Satuan.php on line 123.
+ 1 APPPATH\Controllers\Satuan.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Satuan::$kategori', 'APPPATH\\Controllers\\Satuan.php', 123)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Satuan->hapus('3')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Satuan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -1,0 +1,24 @@
+CRITICAL - 2023-11-19 04:41:11 --> Undefined variable $s
+in APPPATH/Views/Users/index.php on line 266.
+ 1 APPPATH/Views/Users/index.php(266): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $s', 'APPPATH/Views/Users/index.php', 266)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/index', [], true)
+ 5 APPPATH/Controllers/User.php(17): view('Users/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-11-19 19:13:31 --> Undefined variable $s
+in APPPATH/Views/Users/Daftar.php on line 119.
+ 1 APPPATH/Views/Users/Daftar.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $s', 'APPPATH/Views/Users/Daftar.php', 119)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/Daftar.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/Daftar', [], true)
+ 5 APPPATH/Controllers/User.php(30): view('Users/Daftar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\User->daftar()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')

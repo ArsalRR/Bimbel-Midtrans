@@ -64,7 +64,7 @@ return view('Users/Create',$data);
               'mentor'=> $mentorModel  
 
             ];
-            $html = view('Admin/print', $data);
+            $html = view('Admin/print',$data);
     $dompdf = new Dompdf();
     $dompdf->loadHtml($html);
     $dompdf->setPaper('A4', 'landscape');

@@ -1,13 +1,14 @@
 <?php $this->extend('Template/Layout')?>
 <?php $this->section('content')?>
-<h3 class="text-center">Data Minat Memilih Tipe Bimbel</h3>
+<h3 class="text-center">Data Minat Memilih Paket Bimbel</h3>
 <canvas id="myChart" ></canvas>
 <?php $this->section('javasc')?>
- 
-    <script>
-        const dataGrafik = <?php echo json_encode($tampil); ?>;
 
-        let labels = dataGrafik.map(function(item) {
+    <script>
+        
+        const dataGrafik =  <?= json_encode($tampil)  ?>;
+
+        const labels = dataGrafik.map(function(item) {
             return item.tipe_bimbel;
         });
 

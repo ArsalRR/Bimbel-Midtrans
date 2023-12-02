@@ -6,7 +6,7 @@ class ModelBimbel extends Model
    
     protected $table            = 'daftar';
     protected $allowedFields    = [
-        'nama_lengkap', 'alamat','email','no_hp','asal_sekolah','nominal','bukti_trasfer','alias','token','id_order','status','id_mentor','tipe_bimbel'];
+        'nama_lengkap', 'alamat','email','no_hp','asal_sekolah','nominal','bukti_trasfer','alias','token','id_order','status','id_mentor','tipe_bimbel','date'];
 
     public function cariData($cari)
     {

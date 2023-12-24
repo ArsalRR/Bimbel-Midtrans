@@ -1,4 +1,4 @@
-<?php $this->extend('Template/Layout')?>
+<?php $this->extend('Template/User')?>
 <?php $this->section('content')?>
 <div class="card">
             <div class="card-header">

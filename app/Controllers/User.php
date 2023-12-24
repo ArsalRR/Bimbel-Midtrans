@@ -16,6 +16,7 @@ class User extends BaseController
     {
 
         return view('Users/index');
+
     }
 public function Create(){  
 
@@ -57,21 +58,30 @@ return view('Users/Create',$data);
             ];
                 return view('Admin/cek',$data);
             }
-            public function Print(){
-                $tampildata = $this->bimbelmodel->joinToMentor()->findAll();
-                $mentorModel = new MentorModel();
-                $data = ['tampildata'=>$tampildata,
-              'mentor'=> $mentorModel  
-
-            ];
-            $html = view('Admin/print',$data);
-    $dompdf = new Dompdf();
-    $dompdf->loadHtml($html);
-    $dompdf->setPaper('A4', 'landscape');
-    $dompdf->render();
-    $dompdf->stream();
+            public function Print($bulanSelect = null) {
+                $selectedMonth = $bulanSelect ?? date('m');
+            
+                
+                $tampildata = $this->bimbelmodel->findAll();
+                $tampildataFiltered = array_filter($tampildata, function ($item) use ($selectedMonth) {
+                    return date('m', strtotime($item['created_at'])) == $selectedMonth;
+                });
+            
+                $data = [
+                    'tampildata' => $tampildataFiltered,
+                ];
+            
+                $html = view('Admin/print', $data);
+                $dompdf = new Dompdf();
+                $dompdf->loadHtml($html);
+                $dompdf->setPaper('A4', 'landscape');
+                $dompdf->render();
+                $dompdf->stream();
             }
-           
+            public function User (){
+                return view('Template/User');
+            }
+            
             
 }
 

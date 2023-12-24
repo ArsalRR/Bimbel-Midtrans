@@ -1,35 +1,24 @@
 <?= $this->extend('Users/index') ?>
 <?= $this->section('mentor') ?>
-<section class="teacher_section layout_padding-bottom">
-    <div class="container">
-      <h2 class="main-heading ">
-        Mentor
-      </h2>
-      <p class="text-center">
-        Perpengalaman Dalam Pession
-      </p>
-      <div class="teacher_container layout_padding2">
-        <div class="card-deck">
-          <div class="card">
-            <?php foreach($mentor as $m):?>  
-              <div class="card-body">
-              <div class="card">
-            <div class="text-center">
+<div class="teacher_container layout_padding2">
+    <div class="card-deck">
+        <?php foreach ($mentor as $m): ?>
+            <div class="card">
             <?php if ($m['foto_mentor']): ?>
-                <img src="<?= base_url('hasil/' . $m['foto_mentor']) ?>" alt="Foto Mentor" style="max-width: 200px; max-height: 200px;">
+                <img src="<?= base_url('hasil/' . $m['foto_mentor']) ?>" alt="Foto Mentor" style="width: 300px;">
             <?php else: ?>
                 Tanpa Foto
             <?php endif; ?>
-              <h5 class=" "><?= $m['nama'] ?></h5>
-              <h5><?= $m['pelajaran'] ?></h5>
-              <h5><?= $m['jampel'] ?></h5>
-              </div> 
+                <div class="card-body">
+                    <h5 class="card-title"> <b>Nama Mentor : </b><?= $m['nama'] ?></h5>
+                    <h5 class="card-content"> <b>Mata Pelajaran : </b><?= $m['pelajaran'] ?></h5>
+                    <a href="/Taskcontroll/detail/<?= $m['alias']; ?>" class="btn btn-primary mt-3">Detail Materi</a>
+                </div>
             </div>
-            </div>
-            <?php endforeach?>
-          </div>
-        </div>
-      </div>
+        <?php endforeach; ?>
     </div>
-  </section>
+</div>
+
 <?= $this->endSection() ?>
+
+

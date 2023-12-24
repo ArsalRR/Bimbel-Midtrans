@@ -6,8 +6,10 @@ class ModelBimbel extends Model
    
     protected $table            = 'daftar';
     protected $allowedFields    = [
-        'nama_lengkap', 'alamat','email','no_hp','asal_sekolah','nominal','bukti_trasfer','alias','token','id_order','status','id_mentor','tipe_bimbel','date'];
-
+        'nama_lengkap', 'alamat','email','no_hp','asal_sekolah','nominal','bukti_trasfer','alias','token','id_order','status','id_mentor','tipe_bimbel'];
+        protected $useTimestamps = true;
+        protected $createdField  = 'created_at';
+        protected $updatedField  = 'updated_at';
     public function cariData($cari)
     {
         return $this->table('daftar')->like('nama_lengkap', $cari);
@@ -29,6 +31,7 @@ class ModelBimbel extends Model
     {
         return $this->db->table($this->table)->selectSum('nominal')->get()->getRow()->nominal;
     }
- 
-
+    public function getTotalPelajaran(){
+        return $this->groupBy('tipe_bimbel')->select('tipe_bimbel')->selectCount('tipe_bimbel')->findAll();
+    } 
 }

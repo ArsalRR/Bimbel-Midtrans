@@ -1,0 +1,36 @@
+CRITICAL - 2023-12-23 01:18:41 --> Undefined variable $tampil
+in APPPATH/Views/Users/testi.php on line 6.
+ 1 APPPATH/Views/Users/testi.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tampil', 'APPPATH/Views/Users/testi.php', 6)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/testi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/testi', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(159): view('Users/testi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Testi()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-23 01:19:06 --> Undefined variable $tampil
+in APPPATH/Views/Users/testi.php on line 6.
+ 1 APPPATH/Views/Users/testi.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tampil', 'APPPATH/Views/Users/testi.php', 6)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/testi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/testi', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(159): view('Users/testi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Testi()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-23 01:19:07 --> Undefined variable $tampil
+in APPPATH/Views/Users/testi.php on line 6.
+ 1 APPPATH/Views/Users/testi.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tampil', 'APPPATH/Views/Users/testi.php', 6)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Users/testi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Users/testi', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(159): view('Users/testi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Testi()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')

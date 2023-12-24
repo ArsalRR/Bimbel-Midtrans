@@ -2,7 +2,7 @@
 <?php $this->section('content')?>
 <div class="card">
             <div class="card-header">
-                <h5 class="card-title">
+                <h5 class="card-title text-center">
                     Data Pendaftar
                 </h5>
             </div>

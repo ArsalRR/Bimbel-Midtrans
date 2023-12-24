@@ -1,0 +1,417 @@
+ERROR - 2023-12-22 04:51:20 --> mysqli_sql_exception: Duplicate entry '3' for key 'id_mentor' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `da...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/Rangking.php(146): CodeIgniter\BaseModel->save(Array)
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#14 {main}
+CRITICAL - 2023-12-22 04:51:20 --> Duplicate entry '3' for key 'id_mentor'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`, `tipe_bimbel`, `created_at`, `updated_at`) VALUES (\'Bagus Setiawanmmnn\', \'2000000\', \'98888777\', \'ns@gmail.com\', \'ksnknsknks\', \'SMK Maarif Tirto\', \'8ee39dde-39c8-44b6-af0d-6395adcc7cb9\', 1703242279, \'3\', \'bagus-setiawanmmnn\', \'Class Rangking\', \'2023-12-22 04:51:20\', \'2023-12-22 04:51:20\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`, `tipe_bimbel`, `created_at`, `updated_at`) VALUES (\'Bagus Setiawanmmnn\', \'2000000\', \'98888777\', \'ns@gmail.com\', \'ksnknsknks\', \'SMK Maarif Tirto\', \'8ee39dde-39c8-44b6-af0d-6395adcc7cb9\', 1703242279, \'3\', \'bagus-setiawanmmnn\', \'Class Rangking\', \'2023-12-22 04:51:20\', \'2023-12-22 04:51:20\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`, `tipe_bimbel`, `created_at`, `updated_at`) VALUES (\'Bagus Setiawanmmnn\', \'2000000\', \'98888777\', \'ns@gmail.com\', \'ksnknsknks\', \'SMK Maarif Tirto\', \'8ee39dde-39c8-44b6-af0d-6395adcc7cb9\', 1703242279, \'3\', \'bagus-setiawanmmnn\', \'Class Rangking\', \'2023-12-22 04:51:20\', \'2023-12-22 04:51:20\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `daftar` (`nama_lengkap`, `nominal`, `no_hp`, `email`, `alamat`, `asal_sekolah`, `token`, `id_order`, `id_mentor`, `alias`, `tipe_bimbel`, `created_at`, `updated_at`) VALUES (:nama_lengkap:, :nominal:, :no_hp:, :email:, :alamat:, :asal_sekolah:, :token:, :id_order:, :id_mentor:, :alias:, :tipe_bimbel:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/Rangking.php(146): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->simpan()
+11 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+12 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:51:50 --> syntax error, unexpected token "if"
+in APPPATH/Config/Routes.php on line 72.
+ 1 SYSTEMPATH/CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:51:55 --> syntax error, unexpected token "if"
+in APPPATH/Config/Routes.php on line 72.
+ 1 SYSTEMPATH/CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:51:56 --> syntax error, unexpected token "if"
+in APPPATH/Config/Routes.php on line 72.
+ 1 SYSTEMPATH/CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:52:16 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:52:53 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:53:13 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:53:50 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:53:58 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:54:26 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:54:27 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:55:17 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 05:55:56 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 06:37:34 --> Undefined variable $nohalaman
+in APPPATH/Views/Admin/nilai.php on line 24.
+ 1 APPPATH/Views/Admin/nilai.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nohalaman', 'APPPATH/Views/Admin/nilai.php', 24)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/nilai.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/nilai', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(154): view('Admin/nilai', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Penilaian()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 06:38:20 --> Undefined variable $nilai
+in APPPATH/Views/Admin/nilai.php on line 26.
+ 1 APPPATH/Views/Admin/nilai.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nilai', 'APPPATH/Views/Admin/nilai.php', 26)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/nilai.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/nilai', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(154): view('Admin/nilai', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Penilaian()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 06:39:11 --> Undefined variable $nilai
+in APPPATH/Views/Admin/nilai.php on line 26.
+ 1 APPPATH/Views/Admin/nilai.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nilai', 'APPPATH/Views/Admin/nilai.php', 26)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/nilai.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/nilai', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(154): view('Admin/nilai', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Penilaian()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 06:39:35 --> Undefined array key "nama_lengkap"
+in APPPATH/Views/Admin/nilai.php on line 30.
+ 1 APPPATH/Views/Admin/nilai.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_lengkap"', 'APPPATH/Views/Admin/nilai.php', 30)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/nilai.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/nilai', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(154): view('Admin/nilai', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Penilaian()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 06:40:13 --> Undefined array key "alias"
+in APPPATH/Views/Admin/nilai.php on line 34.
+ 1 APPPATH/Views/Admin/nilai.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "alias"', 'APPPATH/Views/Admin/nilai.php', 34)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/nilai.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/nilai', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(154): view('Admin/nilai', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Penilaian()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 06:40:46 --> Undefined variable $pager
+in APPPATH/Views/Admin/nilai.php on line 41.
+ 1 APPPATH/Views/Admin/nilai.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH/Views/Admin/nilai.php', 41)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/nilai.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/nilai', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(154): view('Admin/nilai', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Penilaian()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 06:45:35 --> Trying to access array offset on null
+in APPPATH/Views/Admin/nilai.php on line 30.
+ 1 APPPATH/Views/Admin/nilai.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/nilai.php', 30)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/nilai.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/nilai', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(154): view('Admin/nilai', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Penilaian()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 09:50:13 --> required  is not a valid rule.
+in SYSTEMPATH/Validation/Validation.php on line 323.
+ 1 SYSTEMPATH/Validation/Validation.php(323): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('required ')
+ 2 SYSTEMPATH/Validation/Validation.php(175): CodeIgniter\Validation\Validation->processRules('pesan', 'pesan', 'Mudah Mudah jadi', [...], [...])
+ 3 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/TestiController.php(31): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TestiController->simpan()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestiController))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-12-22 09:58:04 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bimbel_rangking`.`daftar`, CONSTRAINT `daftar_ibfk_1` FOREIGN KEY (`id_mentor`) REFERENCES `mentor` (`id`)) in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `me...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `me...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `me...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `me...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/TaskControll.php(120): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\TaskControll->delete('1')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-12-22 09:58:04 --> Cannot delete or update a parent row: a foreign key constraint fails (`bimbel_rangking`.`daftar`, CONSTRAINT `daftar_ibfk_1` FOREIGN KEY (`id_mentor`) REFERENCES `mentor` (`id`))
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `mentor`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `mentor`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `mentor`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `mentor`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/TaskControll.php(120): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->delete('1')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 16:48:05 --> Undefined array key "nama_lengkap"
+in APPPATH/Views/Admin/nilai.php on line 29.
+ 1 APPPATH/Views/Admin/nilai.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_lengkap"', 'APPPATH/Views/Admin/nilai.php', 29)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/nilai.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/nilai', [], true)
+ 5 APPPATH/Controllers/TaskControll.php(156): view('Admin/nilai', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->Penilaian()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-12-22 19:16:30 --> mysqli_sql_exception: Not unique table/alias: 'mentor' in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT `mentor`...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mentor`...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mentor`...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mentor`...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/TestiController.php(77): CodeIgniter\BaseModel->findAll()
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\TestiController->JadwalBimbel()
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestiController))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-12-22 19:16:30 --> Not unique table/alias: 'mentor'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('SELECT `mentor`.`nama`, `mentor`.`pelajaran`, `daftar`.`nama_lengkap`, `daftar`.`alamat`, `daftar`.`asal_sekolah`, `daftar`.`email`, `daftar`.`id`, `daftar`.`nominal`
+FROM `mentor`
+JOIN `mentor` ON `mentor`.`id`=`daftar`.`id`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mentor`.`nama`, `mentor`.`pelajaran`, `daftar`.`nama_lengkap`, `daftar`.`alamat`, `daftar`.`asal_sekolah`, `daftar`.`email`, `daftar`.`id`, `daftar`.`nominal`
+FROM `mentor`
+JOIN `mentor` ON `mentor`.`id`=`daftar`.`id`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mentor`.`nama`, `mentor`.`pelajaran`, `daftar`.`nama_lengkap`, `daftar`.`alamat`, `daftar`.`asal_sekolah`, `daftar`.`email`, `daftar`.`id`, `daftar`.`nominal`
+FROM `mentor`
+JOIN `mentor` ON `mentor`.`id`=`daftar`.`id`')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mentor`.`nama`, `mentor`.`pelajaran`, `daftar`.`nama_lengkap`, `daftar`.`alamat`, `daftar`.`asal_sekolah`, `daftar`.`email`, `daftar`.`id`, `daftar`.`nominal`
+FROM `mentor`
+JOIN `mentor` ON `mentor`.`id`=`daftar`.`id`', [], false)
+ 5 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/TestiController.php(77): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TestiController->JadwalBimbel()
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestiController))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 19:17:03 --> Undefined array key "foto_mentor"
+in APPPATH/Views/Testi/Jadwal.php on line 9.
+ 1 APPPATH/Views/Testi/Jadwal.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "foto_mentor"', 'APPPATH/Views/Testi/Jadwal.php', 9)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Testi/Jadwal.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Testi/Jadwal', [], true)
+ 5 APPPATH/Controllers/TestiController.php(79): view('Testi/Jadwal', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TestiController->JadwalBimbel()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestiController))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 19:18:10 --> Undefined array key "foto_mentor"
+in APPPATH/Views/Testi/Jadwal.php on line 9.
+ 1 APPPATH/Views/Testi/Jadwal.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "foto_mentor"', 'APPPATH/Views/Testi/Jadwal.php', 9)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Testi/Jadwal.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Testi/Jadwal', [], true)
+ 5 APPPATH/Controllers/TestiController.php(79): view('Testi/Jadwal', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TestiController->JadwalBimbel()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestiController))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 19:18:12 --> Undefined array key "foto_mentor"
+in APPPATH/Views/Testi/Jadwal.php on line 9.
+ 1 APPPATH/Views/Testi/Jadwal.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "foto_mentor"', 'APPPATH/Views/Testi/Jadwal.php', 9)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Testi/Jadwal.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Testi/Jadwal', [], true)
+ 5 APPPATH/Controllers/TestiController.php(79): view('Testi/Jadwal', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TestiController->JadwalBimbel()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestiController))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2023-12-22 19:19:44 --> Undefined array key "jampel"
+in APPPATH/Views/Testi/Jadwal.php on line 11.
+ 1 APPPATH/Views/Testi/Jadwal.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jampel"', 'APPPATH/Views/Testi/Jadwal.php', 11)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Testi/Jadwal.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Testi/Jadwal', [], true)
+ 5 APPPATH/Controllers/TestiController.php(80): view('Testi/Jadwal', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TestiController->JadwalBimbel()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestiController))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2023-12-22 21:03:10 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bimbel_rangking`.`daftar`, CONSTRAINT `daftar_ibfk_1` FOREIGN KEY (`id_mentor`) REFERENCES `mentor` (`id`)) in /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `me...', 0)
+#1 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `me...')
+#2 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `me...')
+#3 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `me...', Array, false)
+#4 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/app/Controllers/TaskControll.php(130): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(927): App\Controllers\TaskControll->delete('2')
+#8 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+#9 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /Users/mymac/Documents/semester 5/ecomer/Bimbel-ecom/system/Commands/Server/rewrite.php(46): require_once('/Users/mymac/Do...')
+#12 {main}
+CRITICAL - 2023-12-22 21:03:10 --> Cannot delete or update a parent row: a foreign key constraint fails (`bimbel_rangking`.`daftar`, CONSTRAINT `daftar_ibfk_1` FOREIGN KEY (`id_mentor`) REFERENCES `mentor` (`id`))
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('DELETE FROM `mentor`
+WHERE `id` IN (\'2\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `mentor`
+WHERE `id` IN (\'2\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `mentor`
+WHERE `id` IN (\'2\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `mentor`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH/Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH/BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/TaskControll.php(130): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\TaskControll->delete('2')
+ 9 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TaskControll))
+10 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')

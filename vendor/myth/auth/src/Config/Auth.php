@@ -16,7 +16,7 @@ class Auth extends BaseConfig
      *
      * @var string
      */
-    public $defaultUserGroup;
+    public $defaultUserGroup = 'user';
 
     /**
      * --------------------------------------------------------------------
@@ -174,7 +174,7 @@ class Auth extends BaseConfig
      *
      * @var bool
      */
-    public $allowRegistration = false;
+    public $allowRegistration = true;
 
     /**
      * --------------------------------------------------------------------

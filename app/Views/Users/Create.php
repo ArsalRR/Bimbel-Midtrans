@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body">
                       <h3 class="text-center">Form Pengisian Pendaftaran Bimbel</h3>
-                    <form action="/Rangking/simpan" method="POST">
+                    <form  id="myForm" action="/Rangking/simpan" method="POST" >
                                 <?= csrf_field(); ?>
                                 <div class="form-group">
                                     <label for="exampleInputUsername1">Nama Lengkap</label>
@@ -56,39 +56,36 @@
                                     <?php endif ?>
                                 </div>
                                 <div class="form-group">
-        <label for="" class="col-sm-2 col-form-label mr-3">Pilih Paket</label>
-        <div class="col-sm-12">
-            <select class="form-control <?= (isset($validation) && $validation->hasError('tipe_bimbel')) ? 'is-invalid' : '' ?>" name="tipe_bimbel">
+    <label for="" class="col-sm-2 col-form-label mr-3">Pilih Paket</label>
+    <div class="col-sm-12">
+        <select class="form-control <?= (isset($validation) && $validation->hasError('tipe_bimbel')) ? 'is-invalid' : '' ?>" name="tipe_bimbel" id="tipe_bimbel" onchange="updateNominal()">
             <?php if (isset(session()->get('validation')['tipe_bimbel'])) : ?>
-                                        <div id="validationServer03Feedback" class="invalid-feedback">
-                                            <?= session()->get('validation')['tipe_bimbel']; ?>
-                                        </div>
-                                    <?php endif ?>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    <?= session()->get('validation')['tipe_bimbel']; ?>
+                </div>
+            <?php endif ?>
             <option value="">===  Paket Bimbingan ===</option>
-                                            <option value="Regular ">Paket Regular</option>
-                                            <option value="Class Rangking">Class Rangking</option>
-                                            <option value="Private Class">Private Class</option>
-            </select>
-          
-        </div>
+            <option value="Regular" id="regularOption">Paket Regular</option>
+            <option value="Class Rangking" id="rangkingOption">Class Rangking</option>
+            <option value="Private Class" id="privateOption">Private Class</option>
+        </select>
+        <p id="paketPenuhMessage" style="color: red; display: none;">Paket telah penuh</p>
     </div>
+</div>
+
     <div class="form-group">
-        <label for="" class="col-sm-2 col-form-label mr-3">Pilih Nominal Harga</label>
-        <div class="col-sm-12">
-            <select class="form-control <?= (isset($validation) && $validation->hasError('nominal')) ? 'is-invalid' : '' ?>" name="nominal">
-            <?php if (isset(session()->get('validation')['nominal'])) : ?>
-                                        <div id="validationServer03Feedback" class="invalid-feedback">
-                                            <?= session()->get('validation')['nominal']; ?>
-                                        </div>
-                                    <?php endif ?>
-            <option value="">=== Pilih Paket Harga ===</option>
-                                            <option value="1000000">Rp 1.000.000</option>
-                                            <option value="2000000"> Rp 2.000.000</option>
-                                            <option value="5000000"> Rp 5.000.000</option>
-            </select>
-          
-        </div>
+    <label for="" class="col-sm-2 col-form-label mr-3" >Harga Bimbel</label>
+    <div class="col-sm-12">
+        <select class="form-control" name="nominal" id="nominal" disabled>
+            <option value="">Total Harga</option>
+            <option value="1000000">Rp 1.000.000</option>
+            <option value="2000000">Rp 2.000.000</option>
+            <option value="5000000">Rp 5.000.000</option>
+        </select>
+       
     </div>
+</div>
+
                              
                                 
                                 <div class="form-group">
@@ -113,5 +110,54 @@
             </div>
         </div>
     </div>
+    <script>
+    function updateNominal() {
+        const tipeBimbel = document.getElementById('tipe_bimbel');
+        const pilihnominal = document.getElementById('nominal');
+        const paketPenuhMessage = document.getElementById('paketPenuhMessage');
+
+        const pilihtipe = tipeBimbel.options[tipeBimbel.selectedIndex].value;
+
+        switch (pilihtipe) {
+            case 'Regular':
+                pilihnominal.value = '1000000';
+                break;
+            case 'Class Rangking':
+                pilihnominal.value = '2000000';
+                break;
+            case 'Private Class':
+                pilihnominal.value = '5000000';
+                break;
+            default:
+                pilihnominal.value = '';
+                break;
+        }
+
+        const selectedRegular = document.querySelectorAll('#tipe_bimbel option:checked[value="Regular"]');
+        const selectedRangking = document.querySelectorAll('#tipe_bimbel option:checked[value="Class Rangking"]');
+        const selectedPrivate = document.querySelectorAll('#tipe_bimbel option:checked[value="Private Class"]');
+
+        const regularOption = document.querySelector('#tipe_bimbel option[value="Regular"]');
+        const rangkingOption = document.querySelector('#tipe_bimbel option[value="Class Rangking"]');
+        const privateOption = document.querySelector('#tipe_bimbel option[value="Private Class"]');
+        
+        regularOption.disabled = selectedRegular.length >= 2;
+        rangkingOption.disabled = selectedRangking.length >= 3;
+        privateOption.disabled = selectedPrivate.length >= 4;
+
+        paketPenuhMessage.style.display = (regularOption.disabled || rangkingOption.disabled || privateOption.disabled) ? 'block' : 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const myForm = document.getElementById('myForm');
+
+        myForm.addEventListener('submit', function () {
+            const nominalSelect = document.getElementById('nominal');
+            nominalSelect.removeAttribute('disabled');
+        });
+    });
+</script>
+    
+
     
 <?= $this->endSection() ?>

@@ -30,7 +30,7 @@
                                                 if ($s['id'] >= 2) : ?>
                                                   <button type="button" class="btn btn-lg btn-danger" disabled>Kelas Telah Penuh</button>
                         <?php else : ?>
-                          <a href="/User/Create" class="btn btn-warning">Daftar Sekarang</a>              
+                          <a href="/User/Create" class="btn btn-primary">Daftar Sekarang</a>              
                         <?php endif ?>
                                              
                                     </div>
@@ -57,7 +57,7 @@
                                                 if ($s['id'] >= 3) : ?>
                                                   <button type="button" class="btn btn-lg btn-danger" disabled>Kelas Telah Penuh</button>
                         <?php else : ?>
-                          <a href="/User/Create" class="btn btn-warning">Daftar Sekarang</a>              
+                          <a href="/User/Create" class="btn btn-primary">Daftar Sekarang</a>              
                         <?php endif ?>
                                              
                                     </div>
@@ -85,7 +85,7 @@
                                                 if ($s['id'] >= 4) : ?>
                                                   <button type="button" class="btn btn-lg btn-danger" disabled>Kelas Telah Penuh</button>
                         <?php else : ?>
-                          <a href="/User/Create" class="btn btn-warning">Daftar Sekarang</a>              
+                          <a href="/User/Create" class="btn btn-primary">Daftar Sekarang</a>              
                         <?php endif ?>
                         
 <?= $this->endSection() ?>

@@ -140,7 +140,7 @@ $id_order = time();
                  'snap'=> $snaptoken,
                  'id_mentor'=> $id_mentor,
                  'alias' => $alias,
-                 'tipe_bimbel'=> $tipe_bimbel
+                 'tipe_bimbel'=> $tipe_bimbel,
                 
     ];
     $this->bimbelmodel->save($data);
@@ -213,12 +213,15 @@ $id_order = time();
         $data = ['tampildata'=> $tampildata,
     'mentor'=>$mentorModel];
     $spreadsheet = new Spreadsheet();
+    $spreadsheet->getProperties()->setTitle("Laporan Data")->setDescription("Laporan Data");
+    $spreadsheet->getActiveSheet()->setCellValue('A1', 'Data Pelaporan Bimbingan Belajar');
+    $spreadsheet->getActiveSheet()->setCellValue('A2', 'Tanggal: ' . date('Y-m-d'));
     $spreadsheet->setActiveSheetIndex(0)
                 ->setCellValue('A1', 'Nama Siswa')
                 ->setCellValue('B1', 'Asal Sekolah')
-                ->setCellValue('C1', 'Ju')
-                ->setCellValue('D1', 'Angkatan')
-                ->setCellValue('E1', 'NIS');
+                ->setCellValue('C1', 'Mata Pelajaran')
+                ->setCellValue('D1', 'Nama Mentor')
+                ->setCellValue('E1', 'Biaya Bimbel');
     
     $column = 2;
     foreach($tampildata as $data) {
@@ -227,7 +230,7 @@ $id_order = time();
                     ->setCellValue('B' . $column, $data['asal_sekolah'])
                     ->setCellValue('C' . $column, $data['pelajaran'])
                     ->setCellValue('D' . $column, $data['nama'])
-                    ->setCellValue('E' . $column, $data['jampel']);
+                    ->setCellValue('E' . $column, $data['nominal']);
         $column++;
     }
    
@@ -240,9 +243,12 @@ $id_order = time();
     $writer->save('php://output');
 
     }
+    
    public function Grafik()  {
     $tampildata = $this->bimbelmodel->findAll();
-    $data = ['tampil' =>  $tampildata];
+    $total = $this->bimbelmodel->getTotalPelajaran();
+    $data = ['tampil' =>  $tampildata,
+    'total' => $total];
 return view('Admin/grafik',$data);        
     }
 

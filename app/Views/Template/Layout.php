@@ -60,7 +60,7 @@
             
             <li
                 class="sidebar-item active ">
-                <a href="index.html" class='sidebar-link'>
+                <a href="#" class='sidebar-link'>
                     <i class="bi bi-grid-fill"></i>
                     <span>Dashboard</span>
                 </a>
@@ -92,26 +92,8 @@
 
             </li>
             
-            <li
-                class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                <i class="bi bi-receipt"></i>
-                    <span>Transaksi</span>
-                </a>
-                <ul class="submenu ">
-                  
-                    <li class="submenu-item">
-                        <a href="/User/Tagihan" class="submenu-link">Tagihan</a>
-                       
-                    </li>
-                    
-                    <li class="submenu-item">
-                        <a href="extra-component-divider.html" class="submenu-link">Divider</a>
-                        
-                    </li>
-                
-            </li>
-        </ul>
+  
+      
         <li
                 class="sidebar-item  has-sub">
                 <a href="#" class='sidebar-link'>
@@ -126,13 +108,23 @@
                         
                     </li>
                     
+                </ul>
+                
+
+            </li>
+            <li
+                class="sidebar-item  has-sub">
+                <a href="#" class='sidebar-link'>
+                <i class="bi bi-person-fill-check"></i>
+                    <span>Kritik Saran</span>
+                </a>
+                
+                <ul class="submenu ">
+                    
                     <li class="submenu-item  ">
-                        <a href="layout-vertical-1-column.html" class="submenu-link">1 Column</a>
+                        <a href="/TaskControll/Penilaian" class="submenu-link">Masukkan</a>
                         
                     </li>
-                    
-                    
-                
                     
                 </ul>
                 
@@ -148,6 +140,7 @@
            
 
        </li>
+       </ul>
        
     </div>
 </div>

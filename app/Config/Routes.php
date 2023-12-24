@@ -36,6 +36,37 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'User::index');
+$routes->group('Rangking', ['filter' => 'role:administrator'], function ($routes) {
+    $routes->get('/', 'Rangking::index');
+    $routes->get('formemail', 'Rangking::formemail');
+    $routes->get('grafik', 'Rangking::grafik');
+    $routes->get('exel', 'Rangking::exel');
+});
+$routes->group('TaskControll', ['filter' => 'role:administrator'], function ($routes) {
+    $routes->get('/', 'TaskControll::index');
+    $routes->get('create', 'TaskControll::create');
+    $routes->get('formedit/(:segment)', 'TaskControll::formedit/$1'); 
+    $routes->get('/','TaskControll::Penilaian');
+});
+$routes->group('User', ['filter' => 'role:user'], function ($routes) {
+    $routes->get('/', 'TestiController::index');
+    $routes->get('/', 'User::Tagihan');
+   
+
+
+ 
+});
+$routes->group('TestiController', ['filter' => 'role:user'], function ($routes) {
+    $routes->get('/', 'TestiController::index');
+    $routes->get('/', 'User::Tagihan');
+    $routes->get('/', 'TestiController::Create');
+
+   
+
+
+ 
+});
+
 
 
 /*

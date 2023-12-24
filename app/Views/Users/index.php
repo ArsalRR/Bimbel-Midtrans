@@ -21,7 +21,7 @@
   <!-- font wesome stylesheet -->
   <link rel="stylesheet" href="<?= base_url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css ') ?>">
   <!-- Custom styles for this template -->
-  <link href=" <?= base_url('css/style.css ') ?>" rel="stylesheet" />
+  <link href=" <?= base_url('css/style.css') ?>" rel="stylesheet" />
   <!-- responsive style -->
   <link href=" <?= base_url('css/responsive.css') ?>" rel="stylesheet" />
 
@@ -53,11 +53,8 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="/TaskControll/about"> About </a>
+                  <a class="nav-link" href="/TaskControll/about"> Home</a>
                 </li>
 
                 <li class="nav-item ">
@@ -67,9 +64,12 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/User/daftar">Daftar Sekarang</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/TaskControll/Testi">Testimoni</a>
+                </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="/rangking">Login</a>
+                  <a class="nav-link" href="/User">Login</a>
                 </li>
 
               </ul>
@@ -105,9 +105,11 @@
         </div>
         <div class="hero_img-container">
           <div>
-            <img src="images/hero.png" alt="" class="img-fluid">
+            <img src="<?= base_url('images/hero.png') ?>" alt="" class="img-fluid">
+
           </div>
         </div>
+  
       </div>
     </section>
   </div>

@@ -45,6 +45,15 @@
                                         </div>
                                     <?php endif ?>
                                 </div>
+                                <div class="form-group">
+    <label class="font-weight-bold">Materi</label>
+    <textarea class="form-control <?php echo isset($validation) && $validation->hasError('materi') ? 'is-invalid' : ''; ?>" name="materi" rows="5" placeholder="Masukkan Materi Yang akan diajarkan"><?= set_value('materi'); ?></textarea>
+    <?php if (isset($validation) && $validation->hasError('materi')) : ?>
+        <div class="alert alert-danger mt-2">
+            <?= $validation->getError('materi'); ?>
+        </div>
+    <?php endif; ?>
+</div>
                                 </div>
                              
                         </div>

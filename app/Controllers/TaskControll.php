@@ -5,14 +5,17 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\MentorModel;
 use App\Models\ModelBimbel;
+use App\Models\TestiModel;
 class TaskControll extends BaseController
 {
     protected $mentormodel;
     protected $bimbelmodel;
+    protected $testimodel;
     public function __construct()
     {
         $this->mentormodel = new MentorModel();
         $this->bimbelmodel = new ModelBimbel();
+        $this->testimodel = new TestiModel();
 
     }
     public function index()
@@ -70,6 +73,14 @@ return view('Mentor/index', $data);
                         
                         
                         ],
+                        'materi' => [
+                            'rules' => 'required[mentor.materi]',
+                            'errors' => [
+                                'required' => 'Materi Harus Di isi  harus di isi.',
+                            ]
+                            
+                            
+                            ],
                         'foto_mentor' => [
                             'rules' => 'uploaded[foto_mentor]|max_size[foto_mentor,1024]|is_image[foto_mentor]',
                             'errors' => [
@@ -92,6 +103,7 @@ $nama_lengkap = $this->request->getVar('nama');
 $pelajaran = $this->request->getVar('pelajaran');
 $jampel = $this->request->getVar('jampel');
 $foto = $this->request->getFile('foto_mentor');
+$materi = $this->request->getVar('materi');
 $namafoto = $foto->getRandomName();
 $foto->move(ROOTPATH . 'public/hasil', $namafoto);
         $data = ['nama' => $nama_lengkap,
@@ -99,6 +111,7 @@ $foto->move(ROOTPATH . 'public/hasil', $namafoto);
                  'jampel' => $jampel,
                  'alias' => $alias,
                  'foto_mentor' => $namafoto,
+                 'materi'=> $materi,
                 
                
                 
@@ -125,6 +138,7 @@ $foto->move(ROOTPATH . 'public/hasil', $namafoto);
                     'id'      => $id,
                     'pelajaran'   => $this->request->getVar('pelajaran'),
                     'jampel'  => $this->request->getVar('jampel'),
+                    'materi'=> $this->request->getVar('materi'),
 
                 ]);
                 return redirect()->to('/TaskControll')->with('berhasil', 'Data Mentor Berhasil Di Update');
@@ -139,10 +153,24 @@ $foto->move(ROOTPATH . 'public/hasil', $namafoto);
                  return view('Mentor/edit', $data);
               
              }
-    public function testi(){
-        return view('Users/testi');
+    public function Testi(){
+        $tampildata = $this->testimodel->findAll();
+        $data = ['tampil' => $tampildata];
+        return view('Users/testi',$data);
     }
     public function about(){
         return view('Users/about');
+    }
+    public function Penilaian (){
+$tampildata = $this->testimodel->findAll();
+
+$data = ['tampildata' => $tampildata];
+
+return view('Admin/nilai',$data);
+    }
+    public function detail($alias){
+$detailmentor = $this->mentormodel->getmentor($alias);
+$data = ['tampildata' => $detailmentor];
+return view('Mentor/detail',$data);
     }
 }

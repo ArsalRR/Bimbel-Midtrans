@@ -6,6 +6,22 @@
                     Laporan Siswa
                 </h5>
             </div>
+            <form action="<?= base_url('User/Print') ?>" method="get" class="mb-3">
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <label class="sr-only" for="bulanSelect">Pilih Bulan</label>
+                        <select class="form-control" id="bulanSelect" name="bulanSelect">
+                            <option value="01">Januari</option>
+                            <option value="02">Februari</option>
+                            <!-- ... -->
+                            <option value="12">Desember</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </div>
+                </div>
+            </form>
             <div class="card-body">
                 <div class="table-responsive datatable-minimal">
                     <table class="table" id="table2">
@@ -46,8 +62,9 @@
                     </table>
 
                     <div style="margin-top: 9rem;text-align:right">
-                         <p> Total Pendapatan</p> <p> Rp<?php echo $total; ?><p>
+                         <p> Total Pendapatan</p> <p> Rp  <?= $total?><p>
                             </div>
+                           
   
                 </div>
             </div>

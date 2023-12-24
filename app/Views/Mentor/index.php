@@ -16,6 +16,7 @@
                                 <th>Nama Mentor</th>
                                 <th>Mata Pelajaran</th>
                                 <th>Jam Pelajaran</th>
+                                <th>Materi</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -32,6 +33,7 @@
                                 <td><?= $s['nama'] ?></td>
                                 <td><?= $s['pelajaran'] ?></td>
                                 <td><?= $s['jampel'] ?></td>
+                                <td><?= $s['materi'] ?></td>
                                <td>
                                    <a href="/TaskControll/formedit/<?= $s['alias'] ?>" class="badge bg-primary"><i class="bi bi-pen-fill"></i></a>
                                    <a href="<?= base_url('TaskControll/delete/'.$s['id']) ?>" class="badge bg-danger" onclick="return confirm('Apa kamu Yakin?')"><i class="bi bi-trash3-fill"></i></a>

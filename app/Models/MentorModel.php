@@ -8,7 +8,7 @@ class MentorModel extends Model
 {
    protected $table = 'mentor';
    protected $allowedFields    = [
-      'nama', 'pelajaran','jampel','alias','foto_mentor'];
+      'nama', 'pelajaran','jampel','alias','foto_mentor','materi'];
 
       public function getmentor($alias = false)
       {
@@ -18,6 +18,6 @@ class MentorModel extends Model
           }
           return $this->where(['alias' => $alias])->first();
       }
-  
+   
 }
 

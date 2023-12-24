@@ -72,5 +72,5 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $filters = ['login' => ['before' => ['Rangking', 'Rangking/index', 'Rangking/formemail','TaskControll/index','TaskControll/create','TaskControll','User/cek','User/Print']]];
+     public $filters = ['login' => ['before' => ['Rangking', 'Rangking/index', 'Rangking/formemail','TaskControll/index','TaskControll/create','TaskControll','User/cek','User/Print','Rangking/Grafik','User/Print','Rangking/Exel','User/Laporan','TestiController/create','TestiController/JadwalBimbel','User/Tagihan']]];
 }

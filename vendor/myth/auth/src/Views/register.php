@@ -29,7 +29,7 @@
         <div class="row border rounded-5 p-3 bg-white box-area">
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe;">
                 <div class="bg-image mb-3">
-                    <img src="assets/compiled/svg/kartun.png" class="image-fluid" style="width: 380px;" alt="">
+                    <img src="assets/compiled/svg/gambar2.png" class="image-fluid" style="width: 380px;" alt="">
                 </div>
                 <p class="text-white fs-2" style="font-weight: 600;"><i class="fa-solid fa-circle-nodes" style="color: #ffffff;"></i> Bimbingan Belajar Rangking</p>
                 <small class="text-white text-wrap text-center mb-3" style="width: 17rem;">Ikut bergabung dengan program kami di sini</small>

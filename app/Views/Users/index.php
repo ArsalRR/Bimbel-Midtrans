@@ -117,16 +117,8 @@
     <div class="container">
   <?= $this->renderSection('about') ?>
   </div>
-
- 
   <?= $this->renderSection('mentor') ?>
-  
-  
   <?= $this->renderSection('testi') ?>
-  
-
-
- 
   <?= $this->renderSection('daftar') ?>
 
   

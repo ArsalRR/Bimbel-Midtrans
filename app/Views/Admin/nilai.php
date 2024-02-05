@@ -3,7 +3,7 @@
 <div class="card">
             <div class="card-header">
                 <h5 class="card-title text-center">
-                    Massukan Dan Kritik
+                    Masukan Dan Kritik
                 </h5>
             </div>
             <div class="card-body">
@@ -26,7 +26,7 @@
         ?>
               <tr>
                                      <td><?= $nomor++; ?></td>
-                                <td><?= $s['nama_siswa'] ?></td>
+                                <td><?= $s['nama_lengkap'] ?></td>
                                 <td><?= $s['pesan'] ?></td>
                                 <td><?= $s['rating'] ?></td>
                             </tr>

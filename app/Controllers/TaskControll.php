@@ -154,15 +154,18 @@ $foto->move(ROOTPATH . 'public/hasil', $namafoto);
               
              }
     public function Testi(){
-        $tampildata = $this->testimodel->findAll();
-        $data = ['tampil' => $tampildata];
+        $tampildata = $this->testimodel->joinTodaftar()->findAll();
+        $bimbelmodel = $this->bimbelmodel->findAll();
+        $data = ['tampil' => $tampildata,
+    'bimbelmodel' => $bimbelmodel];
         return view('Users/testi',$data);
     }
     public function about(){
         return view('Users/about');
     }
     public function Penilaian (){
-$tampildata = $this->testimodel->findAll();
+$tampildata = $this->testimodel->joinTodaftar()->findAll();
+
 
 $data = ['tampildata' => $tampildata];
 

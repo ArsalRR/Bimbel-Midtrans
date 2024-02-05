@@ -34,4 +34,15 @@ class ModelBimbel extends Model
     public function getTotalPelajaran(){
         return $this->groupBy('tipe_bimbel')->select('tipe_bimbel')->selectCount('tipe_bimbel')->findAll();
     } 
+  
+    public function getDataByMonth($selectedMonth) {
+        $selectedMonth = $selectedMonth ?? date('m');
+        $query = $this->db->table('daftar')
+                        ->where('MONTH(created_at)', $selectedMonth)
+                        ->get();
+    
+        return $query->getResultArray(); 
+    }
+    
+  
 }

@@ -24,9 +24,17 @@
                     </div>
                 </div>
                 <div class="row mb-3">
+                    <label for="judul" class="col-sm-2 col-form-label">Materi</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="judul" name="materi" autofocus value="<?= $mentor['materi']; ?>">
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
                     <label for="penulis" class="col-sm-2 col-form-label">Jam Mata Pelajaran</label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control" id="penulis" name="jampel" value="<?= $mentor['jampel']; ?>">
+                        <input type="time" class="form-control" id="penulis" name="jampel" value="<?= $mentor['jampel']; ?>">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Ubah Data</button>

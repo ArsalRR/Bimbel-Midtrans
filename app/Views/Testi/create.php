@@ -1,5 +1,6 @@
 <?= $this->extend('Template/User') ?>
 <?= $this->section('content') ?>
+
 <style>
     .rating {
       unicode-bidi: bidi-override;
@@ -34,18 +35,29 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="text-center">Masukkan Testimonial</h3>
-                    <form action="/TestiController/simpan" method="POST">
+                    <form action="/TestiController/simpan" method="POST"enctype="multipart/form-data">
                         <?= csrf_field(); ?>
-
                         <div class="form-group">
-                            <label for="exampleInputUsername1">Nama Siswa</label>
-                            <input type="text" class="form-control <?= (isset(session()->get('validation')['nama_siswa'])) ? 'is-invalid' : '' ?>" id="exampleInputUsername1" placeholder="Masukkan Nama Siswa" name="nama_siswa" autofocus>
-                            <?php if (isset(session()->get('validation')['nama_siswa'])) : ?>
-                                <div id="validationServer03Feedback" class="invalid-feedback">
-                                    <?= session()->get('validation')['nama_siswa']; ?>
-                                </div>
-                            <?php endif ?>
+                            <label for="" class="col-sm-2 col-form-label mr-3">Nama Siswa</label>
+                            <div class="col-sm-12">
+                                <select class="form-control" name="id_daftar">
+         <option value="">-- Cari Nama Mu -- </option>
+                                    <?php foreach ($bimbelmodel as $m) : ?>
+                                        <option value="<?= $m['id'] ?>"><?= $m['nama_lengkap'] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
                         </div>
+                        </div>
+                                <div class="form-group ml-2">
+                                    <label for="exampleInputUsername1">Uplod Foto Dirimu</label>
+                                    <input type="file" class="form-control <?= (isset(session()->get('validation')['foto_siswa'])) ? 'is-invalid' : '' ?>" id="exampleInputUsername1" placeholder="Foto Siswa" name="foto_siswa" autofocus>
+                                    <?php if (isset(session()->get('validation')['foto_siswa'])) : ?>
+                                        <div id="validationServer03Feedback" class="invalid-feedback">
+                                            <?= session()->get('validation')['foto_siswa']; ?>
+                                        </div>
+                                    <?php endif ?>
+                                </div>
 
                         <div class="form-group">
                             <label for="exampleInputUsername1">Masukkan Pesan dan Kesan</label>
@@ -73,7 +85,7 @@
 
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <a href="/TaskControll" class="btn btn-warning"><i class="bi bi-house"></i></a>
+                            <a href="/TestiController" class="btn btn-warning"><i class="bi bi-house"></i></a>
                         </div>
                     </form>
                 </div>

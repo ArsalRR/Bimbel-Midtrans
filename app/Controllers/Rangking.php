@@ -92,6 +92,16 @@ return view('Admin/index', $data);
                         
                         
                         ],
+                        'id_mentor' => [
+                            'rules' => 'required|is_unique[daftar.id_mentor]',
+                            'errors' => [
+                                'required' => 'Nomer Handphone   harus di isi.',
+                                'is_unique' => 'Nomer Handphone  sudah terdaftar'
+                            ]
+                            
+                            
+                            ],
+
         ]
         )) {
             $validation = \Config\Services::validation();

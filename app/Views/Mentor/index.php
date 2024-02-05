@@ -25,8 +25,14 @@
                         
                         $nomor = 1 + (($nohalaman - 1) * 5);
                          ?>
+                             <div style="display: flex; justify-content: end;" class="mr-3">
+    <a href="/taskControll/create" class="btn btn-primary"><i class="bi bi-plus"></i>Add</a>
+</div>
     <?php foreach ($mentor as $s) :
         ?>
+   
+
+       
               <tr>
                                      <td><?= $nomor++; ?></td>
                                 <td> <img src="<?= base_url('hasil/' . $s['foto_mentor']); ?>" alt="Photo" style="width: 100px;"></td>
@@ -37,7 +43,6 @@
                                <td>
                                    <a href="/TaskControll/formedit/<?= $s['alias'] ?>" class="badge bg-primary"><i class="bi bi-pen-fill"></i></a>
                                    <a href="<?= base_url('TaskControll/delete/'.$s['id']) ?>" class="badge bg-danger" onclick="return confirm('Apa kamu Yakin?')"><i class="bi bi-trash3-fill"></i></a>
-                                   <a href="/taskControll/create" class="badge bg-primary"><i class="bi bi-cloud-plus-fill"></i></a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

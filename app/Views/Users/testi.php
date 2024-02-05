@@ -6,8 +6,14 @@
       
         <?php foreach ($tampil as $s): ?>
             <div class="card">
+            <?php if ($s['foto_siswa']): ?>
+                <img src="<?= base_url('hasil/' . $s['foto_siswa']) ?>" alt="Foto Mentor" style="width: 300px;">
+            <?php else: ?>
+                Tanpa Foto
+            <?php endif; ?>
                 <div class="card-body">
-                <p class="textform1"><strong>Nama Siswa:</strong> <?= $s['nama_siswa']; ?></p>
+
+                <p class="textform1"><strong>Nama Siswa:</strong> <?= $s['nama_lengkap']; ?></p>
                         <p class="textform1"><strong>Pesan dan Kesan:</strong> <?= $s['pesan']; ?></p>
                         <p class="textform1"><strong>Pengalaman :</strong> <?= $s['rating']; ?></p>
                 </div>

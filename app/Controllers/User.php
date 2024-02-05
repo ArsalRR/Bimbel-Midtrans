@@ -59,16 +59,19 @@ return view('Users/Create',$data);
                 return view('Admin/cek',$data);
             }
             public function Print($bulanSelect = null) {
-                $selectedMonth = $bulanSelect ?? date('m');
-            
+                $pilihbulan = $this->request->getGet('bulanSelect') ?? $bulanSelect ?? date('m');
                 
-                $tampildata = $this->bimbelmodel->findAll();
-                $tampildataFiltered = array_filter($tampildata, function ($item) use ($selectedMonth) {
-                    return date('m', strtotime($item['created_at'])) == $selectedMonth;
-                });
+                if (empty($pilihbulan)) {
+                    $allData = $this->bimbelmodel->findAll();
+                } else {
+                    $allData = $this->bimbelmodel->getDataByMonth($pilihbulan);
+                }
+            
+                $total = $this->bimbelmodel->getTotalNominal($allData);
             
                 $data = [
-                    'tampildata' => $tampildataFiltered,
+                    'total' => $total,
+                    'tampildata' => $allData,
                 ];
             
                 $html = view('Admin/print', $data);
@@ -76,10 +79,8 @@ return view('Users/Create',$data);
                 $dompdf->loadHtml($html);
                 $dompdf->setPaper('A4', 'landscape');
                 $dompdf->render();
+            
                 $dompdf->stream();
-            }
-            public function User (){
-                return view('Template/User');
             }
             
             

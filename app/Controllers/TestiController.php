@@ -4,16 +4,19 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\TestiModel;
+use App\Models\ModelBimbel;
 use App\Models\MentorModel;
 
 
 class TestiController extends BaseController
 {
     protected $testimodel;
+    protected $bimbelmodel;
     protected $mentormodel;
     public function __construct(){
         $this->testimodel = new TestiModel();
-        $this->mentormodel = new MentorModel ();
+        $this->bimbelmodel = new  ModelBimbel();
+        $this->mentormodel = new  MentorModel();
     }
 
     public function index()
@@ -21,9 +24,10 @@ class TestiController extends BaseController
         return view('Testi/index');
     }
     public function Create(){
-        $tampildata = $this->testimodel->findAll(); 
-       
+        $tampildata = $this->testimodel->joinTodaftar()->findAll();
+        $bimbelmodel = new ModelBimbel();
         $data =['tampil'=> $tampildata,
+        'bimbelmodel'=>$bimbelmodel->findAll()
 ];
 return view('Testi/create',$data);
 
@@ -46,14 +50,25 @@ return view('Testi/create',$data);
                     
                     
                     ],
-                    'nama_siswa' => [
-                        'rules' => 'required|is_unique[testi.nama_siswa]',
+                    'id_daftar' => [
+                        'rules' => 'required|is_unique[testi.id_daftar]',
                         'errors' => [
                             'required' => 'Nama Lengkap nama harus di isi.',
                             'is_unique' => 'Kamu Sudah Memberi masukkan Terima Kasih'
                         ]
                         
                         ],
+                        'foto_siswa' => [
+                            'rules' => 'uploaded[foto_siswa]|max_size[foto_siswa,1024]|is_image[foto_siswa]',
+                            'errors' => [
+                                'uploaded' => 'Foto mentor harus diunggah.',
+                                'max_size' => 'Ukuran foto  tidak boleh melebihi 1 MB.',
+                                'is_image' => 'File yang diunggah harus berupa gambar.',
+                            ]
+                            
+                            
+                            ],
+                     
       
        
             
@@ -65,10 +80,15 @@ return view('Testi/create',$data);
         }
         $pesan = $this->request->getVar('pesan');
         $rating = $this->request->getVar('rating');
-        $nama_siswa = $this->request->getVar('nama_siswa');
+        $id_daftar = $this->request->getVar('id_daftar');
+        $foto = $this->request->getFile('foto_siswa');
+        $foto_siswa = $foto->getRandomName();
+        $foto->move(ROOTPATH . 'public/hasil', $foto_siswa);
         $data = ['pesan'=>$pesan,
-    'nama_siswa'=>$nama_siswa,
-'rating'=>$rating];
+    'id_daftar'=>$id_daftar,
+'rating'=>$rating,
+'foto_siswa'=>$foto_siswa];
+
 $this->testimodel->save($data);
 return redirect()->to('/TestiController')->with('berhasil', 'Terima kasih ');
 

@@ -25,7 +25,8 @@
                                                 </h1>
                                                 <div class="d-flex justify-content-between mb-3"><span>Buku</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                                 <div class="d-flex justify-content-between mb-3"><span>Les 3 hari</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                                <div class="d-flex justify-content-between mb-3"><span> <?php
+                                                <div class="d-flex justify-content-between mb-3"><span>
+                                                     <?php
                                                 
                                                 if ($s['id'] >= 2) : ?>
                                                   <button type="button" class="btn btn-lg btn-danger" disabled>Kelas Telah Penuh</button>

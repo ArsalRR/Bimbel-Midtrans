@@ -1,0 +1,14 @@
+CRITICAL - 2024-01-17 19:26:15 --> Call to undefined method CodeIgniter\Router\RouteCollection::addFilter()
+in APPPATH/Config/Routes.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(789): require()
+ 2 SYSTEMPATH/CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2024-01-17 19:28:45 --> Call to undefined method CodeIgniter\Router\RouteCollection::addFilter()
+in APPPATH/Config/Routes.php on line 41.
+ 1 SYSTEMPATH/CodeIgniter.php(789): require()
+ 2 SYSTEMPATH/CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')

@@ -1,0 +1,12 @@
+CRITICAL - 2024-01-24 19:50:11 --> Trying to access array offset on null
+in APPPATH/Views/Admin/index.php on line 55.
+ 1 APPPATH/Views/Admin/index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'APPPATH/Views/Admin/index.php', 55)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Admin/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH/Controllers/Rangking.php(39): view('Admin/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Rangking->index()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rangking))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')

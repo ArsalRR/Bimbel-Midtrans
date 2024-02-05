@@ -1,5 +1,6 @@
 <?= $this->extend('Users/index') ?>
 <?= $this->section('daftar') ?>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <div class="container mt-5">
@@ -156,6 +157,20 @@
             nominalSelect.removeAttribute('disabled');
         });
     });
+    Swal.fire({
+  title: "Sudah Punya Akun ?",
+  showDenyButton: true,
+  showCancelButton: false,
+  confirmButtonText: "Sudah",
+  denyButtonText: `Belum  :(`
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire("Silahkan Login Terlebih dahulu", "", "info");
+  } else if (result.isDenied) {
+    window.location.href = "/User";
+  }
+});
+
 </script>
     
 
